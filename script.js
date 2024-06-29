@@ -11,6 +11,23 @@ const channelStats = {
         videos: 20
     }
 };
+$(document).ready(function() {
+    // Sign-Up Form Submission
+    $('#signupForm').submit(function(e) {
+        e.preventDefault();
+        const username = $('#username').val();
+        const password = $('#password').val();
+        const email = $('#email').val();
+
+        // Dummy sign-up validation
+        if (username && password && email) {
+            alert('Sign-up successful!\nUsername: ' + username + '\nEmail: ' + email);
+            // Here you can add further logic to handle successful sign-up, e.g., redirecting to a dashboard
+        } else {
+            alert('Please fill out all fields.');
+        }
+    });
+});
 
 $(document).ready(function() {
     // Login Form Submission
